@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Karla&family=Spectral&display=swap");
+    </style>
+    <!-- normalize -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <h1>random password generator</h1>
+    <div class="password-box-container">
+      <input type="password" placeholder="password" id="password" />
+      <img
+        src="./images/eye-close.png"
+        alt=""
+        id="eyeicon"
+        onclick="hidePassword()"
+      />
+    </div>
+
+    <div class="main-container">
+      <label for="">How long do you want your password to be?</label>
+      <input type="number" value="4" id="passwordLength" />
+      <p class="small-text alert-danger" id="errorHandling"></p>
+    </div>
+
+    <div class="settings-container">
+      <article>
+        <input id="uppercase" type="checkbox" checked />
+        <label for="uppercase">Uppercase Letters (e.g AMZ) </label>
+      </article>
+
+      <article>
+        <input id="lowercase" type="checkbox" />
+        <label for="lowercase">Lowercase Letters (e.g amz) </label>
+      </article>
+
+      <article>
+        <input id="symbols" type="checkbox" />
+        <label for="symbols">Symbols (@&$!#?) </label>
+      </article>
+
+      <article>
+        <input id="digits" type="checkbox" />
+        <label for="digits">Digits (e.g 345) </label>
+      </article>
+    </div>
+    <div class="btn-container">
+      <button class="btn btn-block" onclick="generatePassword()">
+        Generate Another Password
+      </button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
